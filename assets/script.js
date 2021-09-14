@@ -54,24 +54,24 @@ function generatePassword() {
 
   //This one is for numbers such as 123...
   if (numericValues) {
-    for (var i = 0; i < numericValues.length; i++) {
-      const element = numericValues[i]
+    for (var i = 0; i < numberArray.length; i++) {
+      const element = numberArray[i]
       passwordArray.push(element)
     }
   }
 
   //This one is for lower case letters such as abc...
   if (lowerCaseValues) {
-    for (var i = 0; i < lowerCaseValues.length; i++) {
-      const element = lowerCaseValues[i]
+    for (var i = 0; i < lowerArray.length; i++) {
+      const element = lowerArray[i]
       passwordArray.push(element)
     }
   }
 
   //This one is for upper case letters such as ABC...
   if (upperCaseValues) {
-    for (var i = 0; i < upperCaseValues.length; i++) {
-      const element = upperCaseValues[i]
+    for (var i = 0; i < upperArray.length; i++) {
+      const element = upperArray[i]
       passwordArray.push(element)
     }
   }
