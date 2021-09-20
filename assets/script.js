@@ -36,7 +36,7 @@ function generatePassword() {
 
   //If the user rejected all possibilities for characters in the password, inform them of the issue and return them to the list of options.
   if (!specialCharacters && !numericValues && !lowerCaseValues && !upperCaseValues) {
-    alert("We apologize for the inconvenience but it appears you did not select any options for you password. You will now be returned to the list of options for conditions now.  Please pick at least one.  Thank you for your understanding and have a nice day!");
+    alert("We apologize for the inconvenience but it appears you did not select any options for your password. You will now be returned to the list of options for conditions now.  Please pick at least one.  Thank you for your understanding and have a nice day!");
     return
   }
 
