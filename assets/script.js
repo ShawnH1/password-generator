@@ -7,18 +7,18 @@ var lowerArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m
 var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 //passwordArray currently left empty as it will be filled with the different characters after the quantity is selected.
-var passwordArray = []; 
 
 
 function generatePassword() {
   var userInput2
+  var passwordArray = []
 
   //This asks the user to put in a number to determine the length of their password.
   var userInput2 = parseInt(prompt("Please pick a length for your password between 8 and 126 characters long"));
 
   //This checks if the user input was not a number.
   if (isNaN(userInput2)) {
-    alert("We apologize for the inconvenience but this generator requires a number between 8 and 126.  You will now be returned that choice.  Please type in a number in that range.");
+    alert("We apologize for the inconvenience but this generator requires a number between 8 and 126.  You will now be returned to that choice.  Please type in a number in that range.");
     return
   }
 
@@ -32,7 +32,7 @@ function generatePassword() {
   var specialCharacters = confirm("Would you like special characters like '!', '@', and '#' to be included? in your password?");
   var numericValues = confirm("Would you like numbers to be included in your password?");
   var lowerCaseValues = confirm("Would you like lower case letters in your password?");
-  var upperCaseValues = confirm("Woul you like upper case letters in your password?");
+  var upperCaseValues = confirm("Would you like upper case letters in your password?");
 
   //If the user rejected all possibilities for characters in the password, inform them of the issue and return them to the list of options.
   if (!specialCharacters && !numericValues && !lowerCaseValues && !upperCaseValues) {
@@ -42,7 +42,7 @@ function generatePassword() {
 
   //check for userInput2, useful for debugging in the future if there are issues.
   console.log(userInput2)
-
+  console.log(numericValues, specialCharacters, lowerCaseValues, upperCaseValues)
   //Puts the character options the user has selected into the password array
   //This one is for special characters such as !@#
   if (specialCharacters) {
